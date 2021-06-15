@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let anchor = document.createElement("a");
       anchor.classList.add("btn-primary");
+      anchor.setAttribute("target", "_blank");
       anchor.textContent = "Read More";
 
       featuredImage.setAttribute("src", title[i].jetpack_featured_media_url);
@@ -59,8 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
       h3.textContent = title[i].title.rendered;
 
       let string = title[i].excerpt.rendered;
-
-      string.length > 100 ? null : string.length;
 
       p.textContent = string.substring(3, string.length - 5);
 
